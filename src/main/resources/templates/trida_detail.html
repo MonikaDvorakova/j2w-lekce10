@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" th:href="@{/style.css}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu" >
+                <li class="school-name"><a href="">Základní škola 1.Máje</a></li>
+                <li class="item"><a href="/">Naše třídy</a></li>
+            </ul>
+        </nav>
+        <div class="hero-text">
+            <h1 th:text="${trida.nazev}">Naše třídy</h1>
+        </div>
+        <div class="teacher">
+            <span class="teacher__label">Třídní učitel/ka: </span>
+            <span class="teacher__name" th:text="${trida.tridniUcitel.jmeno + ' ' + trida.tridniUcitel.prijmeni}" />
+        </div>
+    </header>
+    <div class="students">
+        <h5>Studenti:</h5>
+        <div class="list">
+            <a th:each="student, iterStat : ${trida.studenti}" th:text="${student.jmeno + ' ' + student.prijmeni}" th:href="@{/student{student_id}/{prijmeni}(student_id=${student.id}, prijmeni=${student.prijmeni})}" class="list__item list__item-students">Class</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

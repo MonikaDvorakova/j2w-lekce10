@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" th:href="@{/style.css}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu" >
+                <li class="school-name"><a href="">Základní škola 1.Máje</a></li>
+<!--                <li class="item"><a href="/">Naše třídy</a></li>-->
+            </ul>
+        </nav>
+        <div class="hero-text">
+            <h1>Naše třídy</h1>
+        </div>
+    </header>
+    <div class="list">
+        <a th:each="class, iterStat : ${classes}" th:text="${class.nazev}" th:href="@{/{trida_id}/{class}(class=${class.nazev}, trida_id=${class.id})}" class="list__item">Class</a>
+    </div>
+</body>
+</html>

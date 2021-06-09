@@ -1,0 +1,162 @@
+header {
+    background-color: #ff4d4d;
+    height: 200px;
+    margin-bottom: 30px;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+    color: #555;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.item {
+    margin: 0 10px 0 0;
+}
+
+.item a:link,
+.item a:visited {
+    padding: 8px 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.item a:hover,
+.item a:active {
+    border-bottom: 2px solid white;
+}
+
+.school-name a {
+    margin-top: 20px;
+    color: white;
+    font-size: 75%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-text {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+
+}
+
+.list__item {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    text-align: center;
+    vertical-align: center;
+    height: 80px;
+    margin: 5px;
+    background-color: #eeeded;
+    border-radius: 5px;
+    border: solid 1px #dddcdc;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.list__item-students {
+    flex: 0 0 250px;
+}
+
+.list__item:hover {
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: 500;
+}
+
+.teacher {
+    text-align: center;
+}
+
+.teacher a {
+    text-decoration: none;
+    color: #dddcdc;
+}
+
+.teacher__label,
+.teacher__name {
+    color: #dddcdc;
+    margin-top: 30px;
+}
+
+.students h5 {
+    margin: 0 0 15px 200px;
+}
+
+.rodice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.vizitka {
+    flex: 0 0 50%
+    border: 1px solid gray;
+    background-color: white;
+    margin: 1em;
+    padding: 1.5em;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.jmeno {
+    font-weight: bold;
+    font-size: 18pt;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+.udaje {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.kontakty {
+    text-align: right;
+}
